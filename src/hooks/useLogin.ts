@@ -29,8 +29,8 @@ const useLogin = () => {
       password,
     };
     try {
-      const res = await Login(payload);
-      router.push("/");
+      await Login(payload);
+      router.push("/my-drive");
     } catch (e: unknown) {
       setAlertVisible(true);
       setAlertMsg("ID 또는 비밀번호가 일치하지 않습니다.");
