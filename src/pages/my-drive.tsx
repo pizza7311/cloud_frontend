@@ -1,9 +1,12 @@
-import SideMenu from "@/components/PageLayout/PageLayout";
+import PageLayout from "@/components/PageLayout/PageLayout";
 import Spinner from "@/components/spinner/Spinner";
 import useRedirect from "@/hooks/useRedirect";
 
 const MyDrive = () => {
   const { loading } = useRedirect(true);
+
+  //TODO: 내 파일 목록 리스트 표시
+
   if (loading) {
     return (
       <div>
@@ -11,10 +14,11 @@ const MyDrive = () => {
       </div>
     );
   }
+
   return (
-    <SideMenu>
+    <PageLayout>
       <div>test</div>
-    </SideMenu>
+    </PageLayout>
   );
 };
 
