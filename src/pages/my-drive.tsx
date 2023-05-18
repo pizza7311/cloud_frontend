@@ -1,3 +1,4 @@
+import SideMenu from "@/components/PageLayout/PageLayout";
 import Spinner from "@/components/spinner/Spinner";
 import useRedirect from "@/hooks/useRedirect";
 
@@ -10,7 +11,11 @@ const MyDrive = () => {
       </div>
     );
   }
-  return <div>개인 드라이브 대쉬보드 페이지</div>;
+  return (
+    <SideMenu>
+      <div>test</div>
+    </SideMenu>
+  );
 };
 
 export default MyDrive;
