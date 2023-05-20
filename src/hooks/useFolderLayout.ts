@@ -1,7 +1,12 @@
-import { useState } from "react";
+import { useRecoilState, atom } from "recoil";
+
+const gridState = atom({
+  key: "gridState",
+  default: true,
+});
 
 const useFolderLayout = () => {
-  const [isGrid, setIsGrid] = useState(true);
+  const [isGrid, setIsGrid] = useRecoilState(gridState);
 
   const handleLayout = () => {
     setIsGrid(!isGrid);
