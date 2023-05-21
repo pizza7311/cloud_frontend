@@ -8,7 +8,7 @@ const PageLayout = ({ children }: PropsWithChildren) => {
     <Layout className="h-full">
       <Header className="flex items-center bg-blue-300">this is header</Header>
       <Content>
-        <Layout className="h-full">
+        <Layout className="h-full bg-white">
           <SideMenu></SideMenu>
           {children}
         </Layout>

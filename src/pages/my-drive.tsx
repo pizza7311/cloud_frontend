@@ -1,3 +1,4 @@
+import FolderViewer from "@/components/FolderViewer/FolderViewer";
 import PageLayout from "@/components/PageLayout/PageLayout";
 import Spinner from "@/components/spinner/Spinner";
 import useRedirect from "@/hooks/useRedirect";
@@ -17,7 +18,9 @@ const MyDrive = () => {
 
   return (
     <PageLayout>
-      <div>test</div>
+      <div className="w-full">
+        <FolderViewer></FolderViewer>
+      </div>
     </PageLayout>
   );
 };
