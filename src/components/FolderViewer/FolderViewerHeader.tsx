@@ -16,7 +16,7 @@ const FolderViewerHeader = () => {
           </div>
           <div>
             <Button
-              title="그리드"
+              title={isGrid ? "그리드 레이아웃" : "목록 레이아웃"}
               shape="circle"
               icon={
                 isGrid ? (
