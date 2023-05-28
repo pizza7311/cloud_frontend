@@ -8,7 +8,7 @@ import {
   EyeFilled,
   LinkOutlined,
 } from "@ant-design/icons";
-import useFileItem from "@/hooks/useFileItem";
+import useFileItem from "@/hooks/FolderViewer/useFileItem";
 
 enum mode {
   grid = "grid",

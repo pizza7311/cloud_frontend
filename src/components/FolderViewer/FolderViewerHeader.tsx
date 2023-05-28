@@ -1,7 +1,7 @@
 import { Button, Layout } from "antd";
 import DirectoryNavigation from "./DirectoryNavigation";
 import { AppstoreOutlined, BarsOutlined } from "@ant-design/icons";
-import useFolderLayout from "@/hooks/useFolderLayout";
+import useFolderLayout from "@/hooks/FolderViewer/useFolderLayout";
 
 const FolderViewerHeader = () => {
   const { Header } = Layout;

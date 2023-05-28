@@ -1,6 +1,6 @@
 import { Layout, Col, Row, List } from "antd";
 import FileItem from "./FileItem";
-import useFolderLayout from "@/hooks/useFolderLayout";
+import useFolderLayout from "@/hooks/FolderViewer/useFolderLayout";
 
 const files = [
   {
