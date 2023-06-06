@@ -3,6 +3,7 @@
  */
 export interface File {
   fileName: string;
+  fileId: string; //file id
   extention: string;
   thumbnail?: string;
   date: Date;

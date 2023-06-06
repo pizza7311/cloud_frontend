@@ -39,11 +39,18 @@ const fileMenu = [
 ];
 
 const FileItem = ({ data, layout = "grid" }: props) => {
-  const { handleClick } = useFileItem(data.fileUrl);
+  const { handleClick, ref, selected } = useFileItem(data.fileId);
 
   if (layout === mode.grid) {
     return (
-      <div className="flex flex-col rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700 h-full hover:bg-slate-200">
+      <div
+        ref={ref}
+        className={
+          selected
+            ? "flex flex-col rounded-lg bg-white dark:bg-neutral-700 h-full outline-4 shadow-[0_0_8px_rgb(82,189,255),0_0_8px_rgb(82,189,255)]"
+            : "flex flex-col rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700 h-full hover:bg-slate-200 "
+        }
+      >
         {data.thumbnail ? (
           <img
             className="rounded-t-lg"
@@ -75,14 +82,21 @@ const FileItem = ({ data, layout = "grid" }: props) => {
     );
   } else {
     return (
-      <div className="flex w-full">
+      <div
+        ref={ref}
+        className={
+          selected
+            ? "flex w-full bg-blue-200"
+            : "flex w-full hover:bg-slate-200"
+        }
+      >
         <Avatar
           className="ml-2 mr-2"
           src={data.thumbnail}
           shape="square"
           size={"large"}
         ></Avatar>
-        <div className="grow text-red-400">
+        <div className="grow">
           <h4 className="m-2">{data.fileName}</h4>
         </div>
         <div className="flex-none">
